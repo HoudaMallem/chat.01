@@ -1,0 +1,67 @@
+<html>
+<header>
+<link rel="stylesheet" type="text/css" href="node_modules/semantic-ui/dist/semantic.min.css">
+</header>
+<body>
+<div class="ui four column grid">
+      <div class="three wide computer nine wide tablet six wide mobile column">
+    <div class="ui segment">
+
+           <div id="users">
+
+    </div>
+    </div>
+  </div>
+  <div class="widescreen only ten wide column">
+    <div class="ui segment">
+     <div id="divmessage" >
+
+    </div>
+      <form class="ui reply form" id="mesfor" >
+    <div class="field">
+      <textarea id="message"></textarea>
+    </div>
+    <div class="ui blue labeled submit icon button" >
+      <i class="icon edit"></i> 
+      <input type="submit" class="submit" id='send' value="Add Reply"/>
+    </div>
+  </form>
+
+    </div>
+  </div>
+
+
+</div>
+   
+<div class="ui basic modal">
+    <form   action=""  id="loginform"  >
+         <div class="ui input">
+             <input type="text" name="username" id="username"/>
+         </div>
+          <div class="ui input">
+                <input type="text"  name="mail" id="mail" />
+          </div>
+       
+        
+      <input type="submit" />
+
+    </form>
+
+</div>
+</body>
+<script src="http://localhost:1337/socket.io/socket.io.js" ></script>
+<script src="node_modules/jquery/dist/jquery.min.js" ></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="node_modules/semantic-ui/dist/semantic.min.js"></script>
+<script src="client.js" ></script>
+<script>
+
+    $('.ui.basic.modal')
+   .modal('setting', 'closable', false)
+  .modal('show')
+</script>
+</html>
