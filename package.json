@@ -1,0 +1,34 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "une petit app de chat ",
+  "main": "client.js",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "socket.io": "^2.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HoudaMallem/chat.01.git"
+  },
+  "keywords": [
+    "nodejs",
+    "socketio",
+    "socket",
+    "sementic",
+    "tempate",
+    "javascript",
+    "js"
+  ],
+  "author": "mallemHouda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HoudaMallem/chat.01/issues"
+  },
+  "homepage": "https://github.com/HoudaMallem/chat.01#readme"
+}
