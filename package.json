@@ -2,7 +2,7 @@
   "name": "chat",
   "version": "1.0.0",
   "description": "une petit app de chat ",
-  "main": "client.js",
+  "main": "server.js",
   "dependencies": {
     "jquery": "^3.2.1",
     "socket.io": "^2.0.3"
