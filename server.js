@@ -3,16 +3,16 @@ var http = require('http');
 var httpserver = http.createServer(function(req,res){
  res.end('firt node js code')
 });
-httpserver.listen(1337);
+httpserver.listen(2000);
 
 var io = require('socket.io').listen(httpserver);
 var userss ={}
 var tabmessage =[]
 io.sockets.on('connection' , function(socket){
-    console.log('nauveau user')
+   // console.log('nauveau user')
     var me = false;
     for (var k in userss) {
-      socket.emit("newuser" , userss[k]);
+      socket.emit("newuser" , userss[k] , me );
         
     }
     for (var k in tabmessage) {
@@ -28,7 +28,7 @@ io.sockets.on('connection' , function(socket){
            //socket.broadcast.emit
             socket.emit('logged');
             userss[me.id]=me;
-            io.sockets.emit("newuser" , me);
+            io.sockets.emit("newuser" , me , me );
     });
     socket.on('disconnect' , function(socket){
         if(!me){
@@ -48,7 +48,7 @@ io.sockets.on('connection' , function(socket){
             if(message.length > 2){
                 tabmessage.shift();
             }
-            io.sockets.emit('newmsg' , message);
+            io.sockets.emit('newmsg' , message );
 
 
     });

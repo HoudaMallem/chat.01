@@ -1,43 +1,75 @@
+<!DOCTYPE html>
 <html>
-<header>
-  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="node_modules/semantic-ui/dist/semantic.min.css">
-</header>
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properties -->
+  <title>Bootstrap - Semantic</title>
+  <link rel="stylesheet" type="text/css" href="node_modules/semantic-ui/dist/semantic.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+<script src="node_modules/jquery/dist/jquery.min.js" ></script>
+  <script src="http://localhost:2000/socket.io/socket.io.js" ></script>
+  <script src="node_modules/semantic-ui/dist/semantic.js"></script>
+
+  <script>
+  $(document)
+    .ready(function() {
+      $('.ui.selection.dropdown').dropdown();
+      $('.ui.menu .ui.dropdown').dropdown({
+        on: 'hover'
+      });
+    })
+  ;
+  </script>
+</head>
 <body>
-<div class="ui two column stackable grid container" style='border:1px;'>
-<div class="ui five column grid">
-      <div class="three wide computer nine wide tablet six wide mobile column">
-    <div class="ui segment">
 
-           <div id="users">
-
-    </div>
+<div class="ui grid container">
+  <div class="row">
+    <div class="column">
+      <h1 class="ui header">Chat application </h1>
     </div>
   </div>
-  <div class="widescreen only ten wide mobile column">
-        <div id="divmessage" >
-
-    </div>
-    <div class="ui segment">
  
+  <div class="row">
+    <div class="column">
+      <h1 class="ui header" id='usertitle'></h1>
 
-    <form class="ui reply form" id="mesfor" >
-    <div class="field">
-      
-        <input type="text"  name="message" id="message" />
-    </div>
-    <div class="ui blue labeled submit icon button" >
+      <div class="ui divider"></div>
+      <div class="ui two column mobile grid">
+       <div class="three wide mobile column">
+          <div class="ui segments" id="users">
+           <!-- <div class="ui red segment">One</div>
+            <div class="ui blue segment">Two</div>
+            <div class="ui green segment">Three</div>
+            -->
+          </div>
+        </div>
+      <div class="thirteen wide mobile column">
+          <div class="ui segments">
+            <div id="divmessage" >
 
-      <input type="submit"  id='send'  class="ui primary button submit" value="Add Reply"/>
-  
-  </form>
-  
+            </div>
+              <form class="ui reply form" id="mesfor" >
+                <div class="field">
+
+                  <input type="text"  name="message" id="message" />
+                </div>
+                <input type="submit"  id='send'  class="ui primary button submit" value="SEND"/>
+              </form>
+          </div>
+        </div>
+        </div>
+
     </div>
   </div>
 
-
+  </div>
+  
 </div>
-   
 <div class="ui basic modal">
     <form   action=""  id="loginform"  >
          <div class="ui input">
@@ -53,18 +85,6 @@
     </form>
 
 </div>
-  </div>
-</body>
-<script src="http://localhost:1337/socket.io/socket.io.js" ></script>
-<script src="node_modules/jquery/dist/jquery.min.js" ></script>
-
-<script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
-<script src="node_modules/semantic-ui/dist/semantic.min.js"></script>
 <script src="view.js" ></script>
 <script src="client.js" ></script>
 <script>
@@ -73,4 +93,6 @@
    .modal('setting', 'closable', false)
   .modal('show')
 </script>
+</body>
+
 </html>
