@@ -1,8 +1,10 @@
 <html>
-<header>
+<head>
+    <meta charset="utf-8" />
+  <title>Page Title</title>
   <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="node_modules/semantic-ui/dist/semantic.min.css">
-</header>
+</head>
 <body>
 <div class="ui two column stackable grid container" style='border:1px;'>
 <div class="ui five column grid">
@@ -54,16 +56,8 @@
 
 </div>
   </div>
-</body>
-<script src="http://localhost:1337/socket.io/socket.io.js" ></script>
 <script src="node_modules/jquery/dist/jquery.min.js" ></script>
-
-<script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
+<script src="http://localhost:2000/socket.io/socket.io.js" ></script>
 <script src="node_modules/semantic-ui/dist/semantic.min.js"></script>
 <script src="view.js" ></script>
 <script src="client.js" ></script>
@@ -73,4 +67,5 @@
    .modal('setting', 'closable', false)
   .modal('show')
 </script>
+</body>
 </html>
