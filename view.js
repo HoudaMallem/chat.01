@@ -5,14 +5,6 @@ var views ={
                     var div = document.createElement('div');
                         blockmessage.appendChild(div);
                        // div.setAttribute("class",'ui olive segment');
-                      //  alert("me :" + me );
-<<<<<<< HEAD
-                          //  alert("me :" + me.username );
-                          // alert(" user message "+message.user.username );
-=======
-                            alert("me :" + me.username );
-                           alert(" user message "+message.user.username );
->>>>>>> f9436136379287a144dd7d9d629766237d0c0f12
                        if(message.user.username != me.username){
                            
                            // div.setAttribute("class",'ui attached right aligned icon  message');
